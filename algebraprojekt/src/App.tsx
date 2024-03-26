@@ -8,26 +8,26 @@ import Charmander from "./pages/charmander";
 import Germany from "./pages/germany";
 import ProfileMaker from "./pages/profile-maker";
 import Pokemon from "./pages/pokemon";
+import Vjezbe from "./pages/vjezbe";
+import DataTypes from "./pages/data-types";
 
 const App = () => {
-  //tu dodajem rute i ond ih u nav dodajemo u array
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
           <Route path="Germany" element={<Germany />} />
+          <Route path="vjezbe" element={<Vjezbe />} />
           <Route path="Charmander" element={<Charmander />} />
-
           <Route path="Pokemon" element={<Pokemon />}>
-            <Route path="profile-maker" element={<ProfileMaker />} />
-            <Route path="history" element={"History"} />
+            <Route index element={<ProfileMaker />} />
+            <Route path="data-types" element={<DataTypes />} />
+            <Route path="about" element={<About />}>
+              <Route path="history" element={"History"} />
+            </Route>
           </Route>
           <Route path="contact" element={<Contact />} />
-          {/* Using path="*" means "match anything", so this route
-              acts like a catch-all for URLs that we don't have explicit
-              routes for. */}
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
