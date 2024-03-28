@@ -1,9 +1,8 @@
 import { useState } from "react";
 import Button from "../components/button";
-
 type ProfileType = {
   name: string;
-  lastName: string;
+  lastname: string;
   age: number;
   gender: boolean;
   profilePicture?: string;
@@ -13,19 +12,16 @@ type BookType = {
   title: string;
   author: string;
   pages: number;
-  hardCovers: boolean;
-};
-
-const defaultProfileValues: ProfileType = {
-  age: 22,
-  gender: false,
-  lastName: "Simunovic",
-  name: "Marin",
-  profilePicture:
-    "https://images.unsplash.com/photo-1710646434776-777e5fc59e64?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  hardCover: boolean;
 };
 
 const DataTypes = () => {
+  const defaultPropertyVales: ProfileType = {
+    age: 22,
+    gender: true,
+    name: "marin",
+    lastname: "simunovic",
+  };
   //spredamo podatke sa ... npr ...profile
   //muteable znaci da se moze mjenjat
   //kad debagiramo console.log
@@ -39,133 +35,99 @@ const DataTypes = () => {
   //arr numbers korisiti petlju da prodemo kroz sve podatke i mapiramo sve di nema 1
   const [grades, setGrades] = useState<number[]>([8, 3, 5, 1, 1, 1, 1]);
   //object mora biti profileType = moramo novu varijablu dodat i u nju dodat ProfileType iznad
-  const [profile, setProfile] = useState<ProfileType>(defaultProfileValues);
+  const [profile, setProfile] = useState<ProfileType>(defaultPropertyVales);
   //ili postojece ili prazan arr
   const [books, setBooks] = useState<BookType[]>([]);
   //boolean pormjena spola cim je kompliciranije moramo napravit novu varijablu i njoj podijeliti
   const [wc, setWc] = useState<boolean>(false);
 
-  const plasticSurgery = () => {
-    const newState: ProfileType = {
-      ...profile,
-      gender: !profile.gender,
-    };
-
-    setProfile(newState);
-  };
-
-  const addBook = () => {
-    const newState: BookType[] = [
-      {
-        title: "Petar Pan",
-        author: "Nemam pojma",
-        hardCovers: false,
-        pages: 30,
-      },
-    ];
-    setBooks(newState);
-  };
-
   return (
     <>
-      <h1>String</h1>
-      <div>{name ? name : "Trenutno ime ne postoji. Molimo dodajte ime."}</div>
-      <Button
-        onClick={() => {
-          setName("Igor");
-        }}
-      >
-        Change name
-      </Button>
-      <hr />
-      <h1>Array stringova</h1>
-      <div>
-        {names.length > 0
-          ? names.map((name, index) => {
-              return <div key={index}>{name}</div>;
-            })
-          : "Nema imena u ovom nizu. Dodajte bar jedno ime kako bi ga vidjeli."}
+      <>
+        <h1>String</h1>
+        <div>{name ? name : "Trenutno ime nepostoji.molimo dodajte."}</div>
         <Button
           onClick={() => {
-            const newState = [...names, "Igor", "Gabrijel", "Mario"];
-            setNames(newState);
+            setName("Igor");
           }}
         >
-          Change names
+          Change name
         </Button>
-      </div>
-      <hr />
-      <h1>Number</h1>
-      <div>
-        {homeNumber > 0
-          ? homeNumber
-          : "Kućni broj ne može biti nula ili manji od nule."}
-        <Button onClick={() => setHomeNumber(50)}>Change home number</Button>
-      </div>
-      <hr />
-      <h1>Array brojeva</h1>
-      <div>
-        {grades.length > 0
-          ? grades.map((grade, index) => {
-              return <div key={index}>{grade > 0 && grade < 6 && grade}</div>;
-            })
-          : "Nema ocjena"}
-        <Button
-          onClick={() => {
-            let newState: number[] = [];
-
-            grades.forEach((grade) => {
-              if (grade > 1) {
-                newState.push(grade);
-              }
-            });
-            setGrades(newState);
-          }}
-        >
-          Obriši sve jedinice
-        </Button>
-      </div>
-      <hr />
-      <h1>Objekt</h1>
-      <div>
-        {profile.profilePicture ? (
-          <img width={30} src={profile.profilePicture} alt="Profile picture" />
-        ) : undefined}
-
+        <hr />
+        <h1>Arr Stringova</h1>
         <div>
-          {profile.name}&nbsp;{profile.lastName},{profile.age}
+          {names.length > 0
+            ? names.map((name, index) => {
+                return <div key={index}> {name}</div>;
+              })
+            : "nema imena upisi"}
         </div>
-        <div>{!profile.gender ? "♀️" : "♂️"}</div>
-        <Button onClick={() => plasticSurgery()}>Change gender</Button>
-      </div>
-      <hr />
-      <h1>Array objekata</h1>
+        <Button
+          onClick={() => {
+            setNames(["marin", "luka", "marko"]);
+          }}
+        >
+          Change Names
+        </Button>
+        <h1>number</h1>
+        <div>
+          {homeNumber > 0 ? homeNumber : "broj nemoze bit u minusu ili 0"}
+        </div>
+        <Button
+          onClick={() => {
+            setHomeNumber(45);
+          }}
+        >
+          Change Number
+        </Button>
+        <h1>arr numbers</h1>
+        <div>
+          {grades.length > 0
+            ? grades.map((grade, index) => {
+                return (
+                  <div key={index}> {grade > 0 && grade < 6 && grade}</div>
+                );
+              })
+            : "nema ocjena"}
+          <Button
+            onClick={() => {
+              let newState: number[] = [];
+              grades.forEach((grade) => {
+                if (grade > 1) {
+                  return grade;
+                }
+              });
+            }}
+          >
+            Obrisi sve 1
+          </Button>
+        </div>
+        <h1>Objekt</h1>
+        <div>
+          {profile.profilePicture ? (
+            <img src={profile.profilePicture} alt="Profilepic" />
+          ) : (
+            ""
+          )}
+          ;
+        </div>
+        <div>{profile.name}</div>
+        <Button></Button>
+      </>
+      <h1>Arr objekata</h1>
       <div>
         {books.length > 0
           ? books.map((book) => {
               return (
                 <>
                   <div key={book.title}>
-                    {book.title}, {book.author}
-                    <div>broj stranica: {book.pages}</div>
-                    <div>tvrde korice: {book.hardCovers ? "da" : "ne"}</div>
+                    {book.title},{book.author}
                   </div>
                 </>
               );
             })
-          : "Trenutno ne postoji niti jedna knjiga za prikaz"}
-        <Button onClick={addBook}>Dodaj knjigu</Button>
+          : "trenutno nema knjiga"}
       </div>
-      <hr />
-      <h1>Boolean</h1>
-      <div>{wc ? "ima ga" : "nema ga"}</div>
-      <Button
-        onClick={() => {
-          setWc(!wc);
-        }}
-      >
-        Call Toi Toi
-      </Button>
     </>
   );
 };

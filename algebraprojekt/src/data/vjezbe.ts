@@ -30,4 +30,8 @@ export const vjezbeLinks: LinkType[] = [
     label: "Data types",
     href: "/data-types",
   },
+  {
+    label: "Gallery",
+    href: "/gallery",
+  },
 ];

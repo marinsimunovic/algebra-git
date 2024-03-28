@@ -11,6 +11,7 @@ import Vjezbe from "./pages/vjezbe";
 import DataTypes from "./pages/data-types";
 import Pokemons from "./pages/pokemons";
 import Flags from "./pages/flags";
+import Gallery from "./pages/gallery";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="pokemons" element={<Pokemons />}>
             <Route path="history" element={"History"} />
           </Route>
+          <Route path="gallery" element={<Gallery />} />
           <Route path="flags" element={<Flags />} />
 
           {/* Using path="*"" means "match anything", so this route

@@ -1,0 +1,12 @@
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .slika {
+    height: 400px;
+    width: 200px;
+    margin: 1rem;
+  }
+}
