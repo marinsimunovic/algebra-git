@@ -44,6 +44,7 @@ const Contact = () => {
   return (
     <>
       <div>
+        <h1>Search for Countries</h1>
         <input
           type="text"
           value={countryName}

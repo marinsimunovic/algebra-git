@@ -20,9 +20,21 @@
       bottom: 1rem;
       left: 50%;
       right: 50%;
-      height: 2px;
+      height: 5px;
       background-color: var(--color-gray-700);
       transition: all 350ms ease-in-out;
     }
   }
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
 }

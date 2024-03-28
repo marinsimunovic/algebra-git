@@ -36,6 +36,7 @@ const Germany = () => {
 
   return (
     <>
+      <h1>About Germany</h1>
       {countryData.map((country, index) => (
         <div key={index}>
           <h2>{country.name.common}</h2>

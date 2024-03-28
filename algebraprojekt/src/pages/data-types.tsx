@@ -22,7 +22,7 @@ const defaultProfileValues: ProfileType = {
   lastName: "Simunovic",
   name: "Marin",
   profilePicture:
-    "https://pbs.twimg.com/profile_images/1572397599323291649/W8RTbXWI_400x400.jpg",
+    "https://images.unsplash.com/photo-1710646434776-777e5fc59e64?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 };
 
 const DataTypes = () => {
