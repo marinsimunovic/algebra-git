@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import { Outlet } from "react-router-dom";
 import Select from "react-select";
 
@@ -75,12 +75,12 @@ const About = () => {
 
   return (
     <>
-      <div>I'm About</div>
+      <div>Buttons of Pokemons</div>
 
       <div>
         <h1>Pokemon</h1>
         <Select
-          onChange={(e) => {
+          onChange={(e: { value: SetStateAction<string | undefined> }) => {
             //getData(e?.value);
             setLimit(e?.value);
           }}

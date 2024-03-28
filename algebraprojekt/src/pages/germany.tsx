@@ -40,10 +40,10 @@ const Germany = () => {
         <div key={index}>
           <h2>{country.name.common}</h2>
           <img src={country.flags.png} alt={country.name.common} />
-          <h2>{country.population}</h2>
-          <h2>{country.region}</h2>
-          <h3>{country.fifa}</h3>
-          <h3>{country.flag}</h3>
+          <h2>population: {country.population}</h2>
+          <h2>region: {country.region}</h2>
+          <h3>fifa: {country.fifa}</h3>
+          <h3>Flag: {country.flag}</h3>
         </div>
       ))}
     </>

@@ -22,7 +22,7 @@ const ProfileMaker = () => {
         <div className="profile__card">
           <img
             className="profile__card__img"
-            src="https://scontent-fra5-2.cdninstagram.com/v/t39.30808-6/433660787_18429230407032357_3857898762968739859_n.jpg?stp=dst-jpg_e15_s320x320&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi44NTd4ODU3LnNkciJ9&_nc_ht=scontent-fra5-2.cdninstagram.com&_nc_cat=109&_nc_ohc=0k4hqyKjvE8AX-7XeHH&edm=AOQ1c0wAAAAA&ccb=7-5&oh=00_AfClGjX9z8yL-5H3-LAy9sMlqA1dRKx8YWQ3YWdqDAFbqA&oe=6603904F&_nc_sid=8b3546"
+            src="https://images.unsplash.com/photo-1710646434776-777e5fc59e64?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Profile picture"
           />
           <div className="profile__card__name">{name}</div>

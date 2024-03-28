@@ -1,38 +1,9 @@
-import { LinkType } from "../types/main";
-
-const vjezbeLinks: LinkType[] = [
-  {
-    href: "/about",
-    label: "About",
-  },
-  {
-    href: "/charmander",
-    label: "Charmander",
-  },
-
-  {
-    href: "/germany",
-    label: "Germany",
-  },
-  {
-    href: "/pokemon",
-    label: "Pokemon",
-  },
-  {
-    href: "/profile-maker",
-    label: "ProfileMaker",
-  },
-  {
-    href: "/data-types",
-    label: "DataTypes",
-  },
-];
+import { vjezbeLinks } from "../data/vjezbe";
 
 const Vjezbe = () => {
   return (
     <>
-      <h1>Popis vjezbi</h1>
-
+      <h1>Popis vježbi</h1>
       <div>
         {vjezbeLinks.map((link) => {
           return (
