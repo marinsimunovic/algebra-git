@@ -20,6 +20,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Charmander" element={<Charmander />} />
+
           <Route path="Germany" element={<Germany />} />
           <Route path="Pokemon" element={<Pokemon />} />
           <Route path="vjezbe" element={<Vjezbe />} />
@@ -37,7 +38,8 @@ const App = () => {
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
-    </>
+    </> //za filtriranje najbolje funkciju
+    //buttone vjezbat kad kliknes da ti filtrira podatke npr samo crvene izbaci
   );
 };
 

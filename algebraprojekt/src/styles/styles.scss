@@ -19,6 +19,9 @@
   --color-gray-400: #7f8c8d;
   --color-gray-600: #34495e;
   --color-gray-700: #2c3e50;
+  --color-gray--transperent: rgb(10, 21, 33) 50;
+  --color--background: #274686;
+  --color--details: #3b5ea3;
 }
 
 * {
@@ -46,3 +49,4 @@ body {
 @import "./components/link.scss"; //utils
 @import "./utils/margins.scss";
 @import "./components/gallery.scss";
+@import "./components/home.scss";
