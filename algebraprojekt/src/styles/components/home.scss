@@ -7,55 +7,49 @@
 .location {
 }
 
-.hobbies {
-  border: none;
-  border-radius: var(--border-rounded);
-  padding: 0.5rem 1rem;
-
-  margin: 0.5rem;
-}
-
 .user {
   &-profile {
+    max-width: 60rem;
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 45%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid var(--color-black);
-    border-radius: 1rem;
-    background-color: var(--color-gray-400);
-    color: var(--color-black);
+    border-radius: 0.5rem;
   }
-
+  &-links {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0.5rem;
+  }
+  &-images {
+    height: 1rem;
+  }
   &-image {
-    width: 5rem;
-    height: 5rem;
-    border-radius: var(--border-circle);
-    border: 1px solid var(--color-black);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+
     margin-bottom: 1.75rem;
+  }
+  &-hobbies {
+    .hobbies {
+      margin: 1rem;
+    }
   }
 
   &-img {
     height: 2rem;
-  }
-
-  &-button {
-    border: none;
-    border-radius: var(--border-rounded);
-    padding: 0.5rem 2rem;
-    margin: 1rem;
-    color: var(--color-white);
-    margin: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   &-details {
-    display: flex;
+    padding: 1rem;
     background-color: var(--color-gray-200);
-    margin: 0.5rem;
-    border-radius: 1rem;
-    padding: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
     &-box {
       padding: 2rem;
     }
@@ -66,12 +60,12 @@
     }
   }
   &-languages {
-    display: flex;
-    flex-direction: column;
+    padding: 1rem;
     background-color: var(--color-gray-200);
-    margin: 0.5rem;
-    border-radius: 1rem;
-    padding: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
     &-english {
       margin-top: 0.5rem;
     }
@@ -85,23 +79,15 @@
   }
 
   &-actions {
-    display: flex;
+    border-radius: 0.5rem;
     background-color: var(--color-gray-200);
-    margin-bottom: 10px;
-    border-radius: 1rem;
-    &-box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
   }
 
   &-hobbies {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
+    padding: 1rem;
     background-color: var(--color-gray-200);
-    border-radius: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 0.5rem;
   }
 }
