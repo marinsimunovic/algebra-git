@@ -1,0 +1,33 @@
+// Slider.scss
+.slider-container {
+  width: 80%; /* Adjust width as needed */
+  margin: 20px auto; /* Center the slider */
+}
+
+.slider {
+  -webkit-appearance: none; /* Remove default styles */
+  appearance: none;
+  width: 100%; /* Full-width slider */
+  height: 10px; /* Height of the slider */
+  background: #595555; /* Gray background */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Remove outline */
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styles */
+    appearance: none;
+    width: 20px; /* Width of the thumb */
+    height: 20px; /* Height of the thumb */
+    background: #666; /* Gray thumb color */
+    border-radius: 50%; /* Rounded shape */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+
+  &::-moz-range-thumb {
+    width: 20px; /* Width of the thumb */
+    height: 20px; /* Height of the thumb */
+    background: #666; /* Gray thumb color */
+    border-radius: 50%; /* Rounded shape */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+}

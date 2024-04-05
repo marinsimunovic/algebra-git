@@ -20,8 +20,8 @@
   --color-gray-600: #34495e;
   --color-gray-700: #2c3e50;
   --color-gray--transperent: rgb(10, 21, 33) 50;
-  --color--background: #274686;
-  --color--details: #3b5ea3;
+  --color--background: rgb(135, 185, 242);
+  --color--details: rgb(186, 223, 243);
 }
 
 * {
@@ -50,3 +50,4 @@ body {
 @import "./utils/margins.scss";
 @import "./components/gallery.scss";
 @import "./components/home.scss";
+@import "./components/slider.scss";
