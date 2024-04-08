@@ -4,33 +4,36 @@
   margin-bottom: 5px;
 }
 
-.location {
-}
-
 .user {
   &-profile {
     max-width: 60rem;
-    background-color: aliceblue;
+    background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
   }
+
   &-links {
     display: flex;
     align-items: center;
     justify-content: end;
     padding: 0.5rem;
   }
+  &-cards {
+    display: flex;
+    align-items: center;
+  }
   &-images {
     height: 1rem;
   }
+
   &-image {
     width: 4rem;
     height: 4rem;
-    border-radius: 1rem;
-
+    border-radius: 4rem;
     margin-bottom: 1.75rem;
   }
+
   &-hobbies {
     .hobbies {
       margin: 1rem;
@@ -59,6 +62,7 @@
       }
     }
   }
+
   &-languages {
     padding: 1rem;
     background-color: var(--color-gray-200);
@@ -80,7 +84,9 @@
 
   &-actions {
     border-radius: 0.5rem;
-    background-color: var(--color-gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
   &-hobbies {
@@ -89,5 +95,43 @@
     margin-left: 2rem;
     margin-right: 2rem;
     border-radius: 0.5rem;
+  }
+
+  /* For screens smaller than 768px (phones) */
+  @media screen and (max-width: 767px) {
+    &-profile {
+      max-width: 100%;
+    }
+
+    &-links {
+      justify-content: center;
+      padding: 0.25rem;
+    }
+
+    &-details,
+    &-languages,
+    &-hobbies {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  /* For screens larger than or equal to 768px (laptops) */
+  @media screen and (min-width: 768px) {
+    &-profile {
+      max-width: 60rem;
+    }
+
+    &-links {
+      justify-content: end;
+      padding: 0.5rem;
+    }
+
+    &-details,
+    &-languages,
+    &-hobbies {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
   }
 }

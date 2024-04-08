@@ -1,13 +1,23 @@
 button {
   border: none;
   border-radius: var(--border-rounded);
-  padding: 0.5rem 1rem;
-  background-color: var(--color-gray-600);
-  color: var(--color-white);
-  margin: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  background-color: var(--color-gray-700);
+  margin-left: 0.5rem;
   /* Adjust padding as needed */
   transition: all 0.3s ease; /* Add transition for smooth animation */
-  button:hover {
-    transform: scale(1.5);
+  &:hover {
+    animation: bubble 0.4s ease-out;
+  }
+}
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }

@@ -3,9 +3,7 @@ import ChatImg from "../assets/chat.svg";
 import GalleryImg from "../assets/gallery.svg";
 import FollowImg from "../assets/follow.svg";
 import Slider from "../components/slider"; // Import Slider component
-import Insta from "../assets/insta.svg";
-import Mail from "../assets/mail.svg";
-import Spotify from "../assets/spotify.svg";
+import Button from "../components/button";
 type MyInfo = {
   url: string;
   name: string;
@@ -20,7 +18,7 @@ type MyInfo = {
 };
 
 const Info: MyInfo = {
-  url: "https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601_640.jpg",
+  url: "https://instagram.fzag4-1.fna.fbcdn.net/v/t51.2885-19/382536270_796768882457281_2666743802291451333_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fzag4-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=FpbZrDOoVdcAb5JvGwo&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfBk17ygKaVJbAGg6_qiOwVXnkZPeO2caoqg6h_kdc3rTw&oe=661A1D66&_nc_sid=8b3546",
   name: "Marin",
   surename: "Šimunović",
   email: "3simunovic.marin@gmail.com",
@@ -30,7 +28,7 @@ const Info: MyInfo = {
     "hiking: Warm-up with stretches (5 mins), start with a moderate incline (30 mins), increase pace on flat terrain (20 mins), enjoy a scenic view or rest (10 mins), descend with focus on balance (25 mins), cool-down stretches (10 mins).",
   ],
   awards: "none",
-  insta: "marin.simunovic2",
+  insta: "marinsimunovic2",
   spotify: "msimunovic",
   facebook: "Marin Šimunović",
   location: "Čepin, Croatia",
@@ -43,48 +41,45 @@ const Home = () => {
     <>
       <div className="user-profile">
         <div className="user-links">
-          {" "}
           <div className="user-actions">
-            <img className="user-img" src={ChatImg} alt="" />
+            <Button>
+              <img className="user-img" src={ChatImg} alt="" />
+            </Button>
 
-            <img className="user-img" src={GalleryImg} alt="" />
+            <Button>
+              <img className="user-img" src={GalleryImg} alt="" />
+            </Button>
 
-            <img className="user-img" src={FollowImg} alt="" />
+            <Button>
+              <img className="user-img" src={FollowImg} alt="" />
+            </Button>
           </div>
         </div>
         <div className="user-info">
           {" "}
-          <img
-            className="user-image"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYS_AWd0LAIhWutPb2Vx8Fm8MXEsSf1pcaA&s"
-            alt="img"
-          />
+          <img className="user-image" src={data.url} alt="img" />
           <div className="username">
             {data.name} {data.surename}
           </div>
           <div className="location">{data.location}</div>
         </div>
-        <div className="user-hobbies">
-          <h3>My routines</h3>
-          {data.hobbies.map((hobby, index) => (
-            <div className="hobbies" key={index}>
-              <li>{hobby}</li>
-            </div>
-          ))}
-        </div>
-        <div className="user-details">
-          <div className="user-details-box">
-            <img className="user-images" src={Mail} alt="" />
+        <div className="user-cards">
+          {" "}
+          <div className="user-hobbies">
+            <h3>My routines</h3>
+            {data.hobbies.map((hobby, index) => (
+              <div className="hobbies" key={index}>
+                <li>{hobby}</li>
+              </div>
+            ))}
+          </div>
+          <div className="user-details">
             <div className="user-details-value-top">{data.email}</div>
 
-            <img className="user-images" src={Insta} alt="" />
             <div className="user-details-value">{data.insta}</div>
-          </div>
-          <div className="user-details-box">
-            <img className="user-images" src={FollowImg} alt="" />
+
             <div className="user-details-value-top">{data.facebook}</div>
 
-            <img className="user-images" src={Spotify} alt="" />
             <div className="user-details-value">{data.spotify}</div>
           </div>
         </div>
