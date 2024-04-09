@@ -7,6 +7,8 @@ import Book from "../assets/hobbies/book.svg";
 import Camping from "../assets/hobbies/camping.svg";
 import Bars from "../assets/bars.svg";
 import Spotify from "../assets/spotify.svg";
+import globe from "../assets/globe.svg";
+import cake from "../assets/cake.svg";
 type MyInfo = {
   url: string;
   name: string;
@@ -90,9 +92,15 @@ const Home = () => {
               <div className="username">
                 {data.name} {data.surename}
               </div>
-              <div className="location">{data.location}</div>
+              <div className="location">
+                <img className="location-img" src={globe} alt="location" />
+                {data.location}
+              </div>
               <div className="phone">{data.phone}</div>
-              <div className="birthday">{data.birth}</div>
+              <div className="birthday">
+                <img className="birthday-img" src={cake} alt="" />
+                {data.birth}
+              </div>
             </div>
           </div>
           <div className="user-cards">

@@ -84,7 +84,11 @@
       height: 2rem;
     }
   }
-
+  .location {
+    &-img {
+      height: 1rem;
+    }
+  }
   &-languages {
     padding: 1rem;
     background-color: var(--color-gray-200);
@@ -163,4 +167,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.birthday {
+  &-img {
+    height: 1rem;
+  }
 }
