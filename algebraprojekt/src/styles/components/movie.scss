@@ -1,0 +1,38 @@
+.movie {
+  &__name {
+    color: var(--color-black); /* Adjust padding as needed */
+  }
+
+  &__image-wrapper {
+    cursor: pointer;
+
+    display: flex;
+
+    width: 65%;
+    &:hover {
+      box-shadow: 0 0.5rem 36px 0 var(--color-black);
+      transform: scale(1.2) translateY(-0.875rem);
+    }
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__actor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    img {
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+      border-radius: var(--border-circle);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

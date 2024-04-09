@@ -9,7 +9,7 @@
 
   --color-purple-400: #8e44ad;
   --color-purple-300: #9b59b6;
-
+  --color-red: rgb(155, 40, 40);
   --color-yellow-400: #f1c40f;
   --color-yellow-500: #f39c12;
 
@@ -52,3 +52,4 @@ body {
 @import "./components/home.scss";
 @import "./components/slider.scss";
 @import "./components/tabs.scss";
+@import "./components/movie.scss";
