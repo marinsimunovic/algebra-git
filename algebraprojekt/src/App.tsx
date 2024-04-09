@@ -1,5 +1,5 @@
 import Layout from "./components/layout";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router } from "react-router-dom";
 import Home from "./pages/home";
 
 import NoMatch from "./pages/no-match";
@@ -12,6 +12,7 @@ import DataTypes from "./pages/data-types";
 import Pokemons from "./pages/pokemons";
 import Flags from "./pages/flags";
 import Gallery from "./pages/gallery";
+import Tabs from "./pages/tabs";
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Charmander" element={<Charmander />} />
-
+          <Route path="Tabs" element={<Tabs />} />
           <Route path="Germany" element={<Germany />} />
           <Route path="Pokemon" element={<Pokemon />} />
           <Route path="vjezbe" element={<Vjezbe />} />

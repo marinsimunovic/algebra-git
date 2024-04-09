@@ -34,4 +34,8 @@ export const vjezbeLinks: LinkType[] = [
     label: "Gallery",
     href: "/gallery",
   },
+  {
+    label: "Tabs",
+    href: "/tabs",
+  },
 ];
