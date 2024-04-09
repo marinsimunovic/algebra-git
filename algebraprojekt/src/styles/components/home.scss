@@ -5,22 +5,38 @@
 }
 
 .user {
+  display: flex;
+
   &-profile {
     max-width: 60rem;
-    background-color: var(--color-white);
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.5rem;
+    background-color: var(--color-gray-300);
+
+    border-radius: 2rem;
+    box-shadow: 0 5px 36px -9px var(--color-gray-400); /* Add shadow */
+    &-top {
+      height: 15rem;
+      background: url("https://images.unsplash.com/photo-1494825514961-674db1ac2700?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-position: 50%;
+      background-size: cover;
+      padding: 0rem;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      .bars {
+        height: 3rem;
+      }
+    }
   }
 
-  &-links {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding: 0.5rem;
-  }
   &-cards {
     display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  &-data {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
   }
   &-images {
@@ -28,13 +44,26 @@
   }
 
   &-image {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 4rem;
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: var(--border-circle);
     margin-bottom: 1.75rem;
+    flex-shrink: 0;
+
+    background-color: var(--color-blue-500);
+    cursor: pointer;
+    margin-top: -8rem;
   }
 
   &-hobbies {
+    &-box {
+      display: flex;
+      align-items: center;
+    }
+    .hobbies-img {
+      height: 2rem;
+    }
     .hobbies {
       margin: 1rem;
     }
@@ -42,8 +71,6 @@
 
   &-img {
     height: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
   }
 
   &-details {
@@ -53,13 +80,8 @@
     margin-right: 2rem;
     border-radius: 0.5rem;
     margin-top: 1rem;
-    &-box {
-      padding: 2rem;
-    }
-    &-value {
-      &-top {
-        margin-bottom: 2rem;
-      }
+    img {
+      height: 2rem;
     }
   }
 
@@ -74,19 +96,21 @@
       margin-top: 0.5rem;
     }
   }
-
+  .username {
+    color: var(--color-black);
+  }
+  h2 {
+    color: var(--color-black);
+  }
   &-info {
-    margin-bottom: 10px;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
   }
 
   &-actions {
     border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
   }
 
   &-hobbies {
@@ -134,4 +158,9 @@
       margin-right: 2rem;
     }
   }
+}
+.user-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

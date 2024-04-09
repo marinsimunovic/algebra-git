@@ -5,8 +5,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--color-white);
   &__wrapper {
-    background-color: var(--color-gray-100);
+    background-color: var(--color-gray-400);
+
     margin-bottom: 2rem;
     box-shadow: 0 -31px 15px 28px var(--color-gray-300);
   }
