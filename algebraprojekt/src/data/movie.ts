@@ -3,7 +3,7 @@ import { MovieType, TabType } from "../types/main";
 export const movieData: MovieType[] = [
   {
     id: "1",
-    name: "Batman",
+    name: "The Batman",
     year: "2022",
     age: "PG-13",
     length: "2h 56m",

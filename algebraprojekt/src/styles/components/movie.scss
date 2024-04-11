@@ -1,14 +1,19 @@
 .movie {
+  &__about {
+    background-color: var(--color-gray-200);
+  }
   &__details {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: var(--color-black);
+    margin-right: 3rem;
   }
   .tag__wrapper {
     display: flex;
   }
   &__name {
+    font-size: xx-large;
     color: var(--color-black); /* Adjust padding as needed */
     &:hover {
       transform: scale(1.2) translateY(-0.3rem);
