@@ -1,5 +1,5 @@
 import Layout from "./components/layout";
-import { Routes, Route, Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 
 import NoMatch from "./pages/no-match";
@@ -13,6 +13,8 @@ import Pokemons from "./pages/pokemons";
 import Flags from "./pages/flags";
 import Gallery from "./pages/gallery";
 import Tabs from "./pages/tabs";
+import Games from "./pages/games";
+import GameInfo from "./pages/gameInfo";
 
 const App = () => {
   return (
@@ -21,7 +23,11 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Charmander" element={<Charmander />} />
-          <Route path="Tabs" element={<Tabs />} />
+          <Route path="Tabs" element={<Tabs />} />{" "}
+          <Route path="games">
+            <Route index element={<Games />} />
+            <Route path=":gameId" element={<GameInfo />} />
+          </Route>
           <Route path="Germany" element={<Germany />} />
           <Route path="Pokemon" element={<Pokemon />} />
           <Route path="vjezbe" element={<Vjezbe />} />
@@ -32,7 +38,6 @@ const App = () => {
           </Route>
           <Route path="gallery" element={<Gallery />} />
           <Route path="flags" element={<Flags />} />
-
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}
