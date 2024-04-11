@@ -4,6 +4,9 @@
   border-radius: var(--border-circle);
   background-color: var(--color-gray-200);
   margin-right: 0.5rem;
+  &:hover {
+    background-color: var(--color-gray-400);
+  }
   &:last-child {
     margin-right: 0;
   }

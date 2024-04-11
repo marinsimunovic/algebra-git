@@ -6,29 +6,32 @@ const Tabs = () => {
   const [activeTab, setActiveTab] = useState<TabType>(tabData[0]);
   return (
     <>
-      <div className="tab">
-        {tabData.map((tab) => {
-          return (
-            <div
-              key={tab.id}
-              className={`tab__item ${tab.id === activeTab.id ? "active" : ""}`}
-              onClick={() => {
-                setActiveTab(tab);
-              }}
-            >
-              {tab.label}
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="tab__content">
-        <MovieRender
-          //find moze vratit undefined moram pazit na to
-          movie={movieData.find((movie) => {
-            return activeTab.id === movie.id;
+      <div className="page">
+        <div className="tab__content">
+          <MovieRender
+            //find moze vratit undefined moram pazit na to
+            movie={movieData.find((movie) => {
+              return activeTab.id === movie.id;
+            })}
+          />
+        </div>
+        <div className="tab">
+          {tabData.map((tab) => {
+            return (
+              <div
+                key={tab.id}
+                className={`tab__item ${
+                  tab.id === activeTab.id ? "active" : ""
+                }`}
+                onClick={() => {
+                  setActiveTab(tab);
+                }}
+              >
+                {tab.label}
+              </div>
+            );
           })}
-        />
+        </div>
       </div>
     </>
   );

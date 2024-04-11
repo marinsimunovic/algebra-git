@@ -11,6 +11,8 @@ export type MovieType = {
   id: string;
   name: string;
   year: string;
+  age: string;
+  length: string;
   about: string;
   genre: string[];
   imgUrl: string;

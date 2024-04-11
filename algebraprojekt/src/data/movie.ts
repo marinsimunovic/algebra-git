@@ -5,12 +5,15 @@ export const movieData: MovieType[] = [
     id: "1",
     name: "Batman",
     year: "2022",
-    genre: ["action", "crime", "drama"],
+    age: "PG-13",
+    length: "2h 56m",
+    genre: ["Action", "Crime", "Drama"],
     imgUrl:
       "https://m.media-amazon.com/images/M/MV5BYTExZTdhY2ItNGQ1YS00NjJlLWIxMjYtZTI1MzNlMzY0OTk4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
-    imgUrl2: "https://mecinemas.com/assets/img/posters/TheBatman_banner.jpg",
+    imgUrl2:
+      "https://i.redd.it/in-the-batman-2022-the-cops-chase-batman-when-he-tries-to-v0-on71341prvo81.gif?width=498&auto=webp&s=00ff06bf3ac3f4ab6a76aaff80d8a4aa40bd6d56",
     about:
-      "Batman is called to intervene when the mayor of Gotham City is murdered. Soon, his investigation leads him to uncover a web of corruption, linked to his own dark past.On Halloween, Gotham City mayor Don Mitchell Jr. is murdered by the masked serial killer the Riddler. Reclusive billionaire Bruce Wayne, who has operated for two years as the vigilante Batman, investigates the murder alongside the Gotham City Police Department (GCPD). Lieutenant James Gordon discovers a message that the Riddler left for Batman. The following night, the Riddler kills Commissioner Pete Savage and leaves another message for Batman. Batman and Gordon discover that the Riddler left a thumb drive in Mitchell's car containing images of Mitchell with a woman, Annika Kosolov, at the Iceberg Lounge—a nightclub operated by Oswald The Penguin Cobblepot, who is crime boss Carmine Falcone's lieutenant. While the Penguin pleads ignorance, Batman notices that Annika's roommate Selina Kyle works at the club as a waitress. When Annika disappears, Batman sends Selina to the Iceberg Lounge for answers and discovers that Savage was on Falcone's payroll like district attorney Gil Colson.The Riddler abducts Colson, straps a timed collar bomb to his neck and sends him to interrupt Mitchell's funeral. When Batman arrives, the Riddler calls him via Colson's phone and threatens to detonate the bomb if Colson cannot answer three riddles. Colson refuses to answer the third—the name of the informant who gave the GCPD information that led to a historic drug bust ending Salvatore Maroni's operation—and is killed. Batman and Gordon deduce that the informant may be the Penguin and track him to a drug deal. They discover that Maroni's operation transferred to Falcone, with many corrupt GCPD officers involved. Selina inadvertently exposes them when she arrives to steal money and discovers Annika's corpse in the trunk of a car. Batman captures the Penguin after a car chase, but he and Gordon learn that the Penguin is not the informant. ",
+      "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
     cast: [
       {
         imgUrl:
@@ -40,12 +43,15 @@ export const movieData: MovieType[] = [
   },
   {
     id: "2",
-    name: "Batman2",
-    year: "2024",
-    genre: ["action", "crime", "drama"],
+    name: "Joker",
+    year: "2019",
+    age: "R",
+    length: "2h 2m",
+    genre: ["Thriller", "Crime", "Drama"],
     imgUrl:
-      "https://m.media-amazon.com/images/M/MV5BMzA0NmZiZWEtOTRjZS00NTk3LTgzOGQtODMwMDg5ZjRiMTI5XkEyXkFqcGdeQXVyMTcxMzQ0MTg4._V1_FMjpg_UX1000_.jpg",
-    about: "Not much is known,we just know that the joker might return.",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhCB2nSlTC-rrsWF6z4hA_OWQWGpamDa5ZJwLoxFitoQ&s",
+    about:
+      "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
     cast: [
       {
         imgUrl:
@@ -72,14 +78,15 @@ export const movieData: MovieType[] = [
         realName: "Colin Farrell",
       },
     ],
-    imgUrl2:
-      "https://static0.moviewebimages.com/wordpress/wp-content/uploads/2024/02/the-batman-joker-keoghan.jpg",
+    imgUrl2: "https://media.giphy.com/media/DPSWVkL9t5nh58cMlo/giphy.gif",
   },
   {
     id: "3",
     name: "Spider-Man: Into the Spider-Verse",
     year: "2018",
-    genre: ["animation", "action", "adventure"],
+    age: "PG-13",
+    length: "1h 57m",
+    genre: ["Animation", "Action", "Adventure"],
     imgUrl:
       "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_FMjpg_UX1000_.jpg",
     about:
@@ -111,13 +118,15 @@ export const movieData: MovieType[] = [
       },
     ],
     imgUrl2:
-      "https://m.media-amazon.com/images/M/MV5BNjUzNzc3NjQ4OF5BMl5BanBnXkFtZTgwNzgyODI4NjM@._V1_.jpg",
+      "https://media1.giphy.com/media/9tZc9Mzo9K0yOYx38U/200.gif?cid=6c09b952rrd2087ev8ulnk9h33tdr4dilnqi6tjl3tnhfdxk&ep=v1_internal_gif_by_id&rid=200.gif&ct=g",
   },
   {
     id: "4",
     name: "Spider-Man: Across the Spider-Verse",
     year: "2023",
-    genre: ["animation", "action", "adventure"],
+    age: "PG-13",
+    length: "2h 20m",
+    genre: ["Animation", "Action", "Adventure"],
     imgUrl:
       "https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_.jpg",
     about:
@@ -149,13 +158,176 @@ export const movieData: MovieType[] = [
       },
     ],
     imgUrl2:
-      "https://ca-times.brightspotcdn.com/dims4/default/324a874/2147483647/strip/true/crop/9560x4000+0+0/resize/1200x502!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fec%2F9d%2F0df9c3db4e12aaf5aa95ea35c3b6%2Fet-spiderman-across-the-spiderverse-2023-001.JPG",
+      "https://cdn.vox-cdn.com/uploads/chorus_asset/file/24693275/across_spiderverse_action.gif",
+  },
+  {
+    id: "5",
+    name: "Deadpool",
+    year: "2016",
+    age: "R",
+    length: "1h 48m",
+    genre: ["Action", "Comedy"],
+    imgUrl:
+      "https://upload.wikimedia.org/wikipedia/en/2/23/Deadpool_%282016_poster%29.png",
+    about:
+      "A wisecracking mercenary gets experimented on and becomes immortal yet hideously scarred, and sets out to track down the man who ruined his looks.",
+    cast: [
+      {
+        imgUrl:
+          "https://images.hellomagazine.com/horizon/square/ef4c1d8f1ca5-ryan-reynolds-at-premiere.jpg",
+        movieName: "Deadpool",
+        realName: "Ryan Reynolds",
+      },
+      {
+        imgUrl:
+          "https://media.carnegie.org/filer_public_thumbnails/filer_public/f0/c0/f0c05f42-ce99-4dba-92a0-223a06e8283a/morena_baccarin-2.jpeg__1200x630_q85_subsampling-2.jpg",
+        movieName: "Vanessa",
+        realName: "Morena Baccarin",
+      },
+      {
+        imgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gina_Carano.jpg/220px-Gina_Carano.jpg",
+        movieName: "Angel Dust",
+        realName: "Gina Carano",
+      },
+      {
+        imgUrl:
+          "https://media.themoviedb.org/t/p/w500/AaMTvZkroI8uo5JXQiJ5pSLEgSJ.jpg",
+        movieName: "Ajax",
+        realName: "Ed Skrein",
+      },
+    ],
+    imgUrl2:
+      "https://i.pinimg.com/originals/cf/18/b3/cf18b3797c47f9ee093ee23a2d19f339.gif",
+  },
+  {
+    id: "6",
+    name: "Logan",
+    year: "2017",
+    age: "R",
+    length: "2h 17m",
+    genre: ["Action", "Drama", "Sci-fi"],
+    imgUrl:
+      "https://m.media-amazon.com/images/M/MV5BYzc5MTU4N2EtYTkyMi00NjdhLTg3NWEtMTY4OTEyMzJhZTAzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_FMjpg_UX1000_.jpg",
+    about:
+      "In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.",
+    cast: [
+      {
+        imgUrl:
+          "https://images.hellomagazine.com/horizon/square/ef4c1d8f1ca5-ryan-reynolds-at-premiere.jpg",
+        movieName: "Deadpool",
+        realName: "Ryan Reynolds",
+      },
+      {
+        imgUrl:
+          "https://media.carnegie.org/filer_public_thumbnails/filer_public/f0/c0/f0c05f42-ce99-4dba-92a0-223a06e8283a/morena_baccarin-2.jpeg__1200x630_q85_subsampling-2.jpg",
+        movieName: "Vanessa",
+        realName: "Morena Baccarin",
+      },
+      {
+        imgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gina_Carano.jpg/220px-Gina_Carano.jpg",
+        movieName: "Angel Dust",
+        realName: "Gina Carano",
+      },
+      {
+        imgUrl:
+          "https://media.themoviedb.org/t/p/w500/AaMTvZkroI8uo5JXQiJ5pSLEgSJ.jpg",
+        movieName: "Ajax",
+        realName: "Ed Skrein",
+      },
+    ],
+    imgUrl2:
+      "https://goatmoviereviews.wordpress.com/wp-content/uploads/2017/03/wjmpmu.gif?w=583",
+  },
+  {
+    id: "7",
+    name: "Venom",
+    year: "2017",
+    age: "PG-13",
+    length: "1h 52m",
+    genre: ["Action", "Drama", "Sci-fi"],
+    imgUrl:
+      "https://m.media-amazon.com/images/M/MV5BNTFkZjdjN2QtOGE5MS00ZTgzLTgxZjAtYzkyZWQ5MjEzYmZjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg",
+    about:
+      "A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.",
+    cast: [
+      {
+        imgUrl:
+          "https://images.hellomagazine.com/horizon/square/ef4c1d8f1ca5-ryan-reynolds-at-premiere.jpg",
+        movieName: "Deadpool",
+        realName: "Ryan Reynolds",
+      },
+      {
+        imgUrl:
+          "https://media.carnegie.org/filer_public_thumbnails/filer_public/f0/c0/f0c05f42-ce99-4dba-92a0-223a06e8283a/morena_baccarin-2.jpeg__1200x630_q85_subsampling-2.jpg",
+        movieName: "Vanessa",
+        realName: "Morena Baccarin",
+      },
+      {
+        imgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gina_Carano.jpg/220px-Gina_Carano.jpg",
+        movieName: "Angel Dust",
+        realName: "Gina Carano",
+      },
+      {
+        imgUrl:
+          "https://media.themoviedb.org/t/p/w500/AaMTvZkroI8uo5JXQiJ5pSLEgSJ.jpg",
+        movieName: "Ajax",
+        realName: "Ed Skrein",
+      },
+    ],
+    imgUrl2: "https://i.makeagif.com/media/12-05-2018/bTvnY4.gif",
+  },
+  {
+    id: "8",
+    name: "Avengers",
+    year: "2012",
+    age: "PG-13",
+    length: "2h 23m",
+    genre: ["Action", "Sci-fi"],
+    imgUrl:
+      "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+    about:
+      "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+    cast: [
+      {
+        imgUrl:
+          "https://images.hellomagazine.com/horizon/square/ef4c1d8f1ca5-ryan-reynolds-at-premiere.jpg",
+        movieName: "Deadpool",
+        realName: "Ryan Reynolds",
+      },
+      {
+        imgUrl:
+          "https://media.carnegie.org/filer_public_thumbnails/filer_public/f0/c0/f0c05f42-ce99-4dba-92a0-223a06e8283a/morena_baccarin-2.jpeg__1200x630_q85_subsampling-2.jpg",
+        movieName: "Vanessa",
+        realName: "Morena Baccarin",
+      },
+      {
+        imgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gina_Carano.jpg/220px-Gina_Carano.jpg",
+        movieName: "Angel Dust",
+        realName: "Gina Carano",
+      },
+      {
+        imgUrl:
+          "https://media.themoviedb.org/t/p/w500/AaMTvZkroI8uo5JXQiJ5pSLEgSJ.jpg",
+        movieName: "Ajax",
+        realName: "Ed Skrein",
+      },
+    ],
+    imgUrl2:
+      "https://i.pinimg.com/originals/de/11/b3/de11b30b19435cad436f74c4f252562c.gif",
   },
 ];
 
 export const tabData: TabType[] = [
   { id: "1", label: "Batman" },
-  { id: "2", label: "Batman2" },
+  { id: "2", label: "Joker" },
   { id: "3", label: "Spider-Man: Into the Spider-Verse" },
   { id: "4", label: "Spider-Man: Across the Spider-Verse" },
+  { id: "5", label: "Deadpool" },
+  { id: "6", label: "Logan" },
+  { id: "7", label: "Venom" },
+  { id: "8", label: "Avengers" },
 ];

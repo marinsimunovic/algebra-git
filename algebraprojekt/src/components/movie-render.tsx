@@ -22,17 +22,21 @@ const MovieRender = ({ movie }: Props) => {
               alt="movie__image"
             />
           </div>
-          <h2 className="movie__name">{movie.name}</h2>
+          <div className="movie__details">
+            <h2 className="movie__name">{movie.name}</h2> {movie.age}
+            {" - "}
+            {movie.length}
+          </div>
           <div>
             <b className="movie__date">{movie.year}</b>
           </div>
-          <hr />
           <div className="tag__wrapper">
             {movie.genre.map((genre) => {
               return <Tag key={genre}>{genre}</Tag>;
             })}
-          </div>
-          <p className="movie__details">{movie.about}</p>
+          </div>{" "}
+          <hr />
+          <p className="movie__about">{movie.about}</p>
           <div>
             <hr />
             <h2>Cast</h2>

@@ -1,6 +1,18 @@
 .movie {
+  &__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-black);
+  }
+  .tag__wrapper {
+    display: flex;
+  }
   &__name {
     color: var(--color-black); /* Adjust padding as needed */
+    &:hover {
+      transform: scale(1.2) translateY(-0.3rem);
+    }
   }
 
   &__image-wrapper {
@@ -27,6 +39,10 @@
       height: 4rem;
       object-fit: cover;
       border-radius: var(--border-circle);
+      &:hover {
+        box-shadow: 0 0.5rem 36px 0 var(--color-black);
+        transform: scale(1.2) translateY(-0.3rem);
+      }
     }
   }
 
