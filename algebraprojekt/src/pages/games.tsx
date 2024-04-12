@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { gamesData } from "../data/video-games";
-
+import Arrow from "../assets/arrow.svg";
 const Games = () => {
   const navigate = useNavigate();
   const goTo = (gameId: string) => {
@@ -9,6 +9,9 @@ const Games = () => {
   };
   return (
     <>
+      <a href="/vjezbe">
+        <img className="back" src={Arrow} alt="arrow" />
+      </a>
       <div className="games__grid">
         {gamesData.map((game) => {
           return (

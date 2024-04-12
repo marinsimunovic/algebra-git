@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Arrow from "../assets/arrow.svg";
 type ImageInfo = {
   url: string;
   name: string;
@@ -64,6 +64,9 @@ const Gallery = () => {
 
   return (
     <>
+      <a href="/vjezbe">
+        <img className="back" src={Arrow} alt="arrow" />
+      </a>
       <h1>Gallery</h1>
       <hr />
       <div className="gallery">

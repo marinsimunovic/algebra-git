@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import Arrow from "../assets/arrow.svg";
 type CountryDataType = {
   name: {
     common: string;
@@ -36,6 +36,9 @@ const Germany = () => {
 
   return (
     <>
+      <a href="/vjezbe">
+        <img className="back" src={Arrow} alt="arrow" />
+      </a>
       <h1>About Germany</h1>
       {countryData.map((country, index) => (
         <div key={index}>

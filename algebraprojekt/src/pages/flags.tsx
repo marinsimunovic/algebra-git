@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Arrow from "../assets/arrow.svg";
 type CountryDataType = {
   name: {
     common: string;
@@ -43,6 +43,10 @@ const Contact = () => {
 
   return (
     <>
+      {" "}
+      <a href="/vjezbe">
+        <img className="back" src={Arrow} alt="arrow" />
+      </a>
       <div>
         <h1>Search for Countries</h1>
         <input

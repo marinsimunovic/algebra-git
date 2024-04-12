@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../components/button";
+import Arrow from "../assets/arrow.svg";
 type ProfileType = {
   name: string;
   lastname: string;
@@ -44,6 +45,10 @@ const DataTypes = () => {
   return (
     <>
       <>
+        {" "}
+        <a href="/vjezbe">
+          <img className="back" src={Arrow} alt="arrow" />
+        </a>
         <h1>String</h1>
         <div>{name ? name : "Trenutno ime nepostoji.molimo dodajte."}</div>
         <Button

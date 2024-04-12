@@ -1,6 +1,7 @@
 import { useState, useEffect, SetStateAction } from "react";
 import { Outlet } from "react-router-dom";
 import Select from "react-select";
+import Arrow from "../assets/arrow.svg";
 
 type PokemonsResponseType = {
   count: number;
@@ -75,6 +76,9 @@ const About = () => {
 
   return (
     <>
+      <a href="/vjezbe">
+        <img className="back" src={Arrow} alt="arrow" />
+      </a>
       <div>Buttons of Pokemons</div>
 
       <div>

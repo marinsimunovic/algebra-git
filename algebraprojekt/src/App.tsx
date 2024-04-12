@@ -1,7 +1,6 @@
 import Layout from "./components/layout";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-
 import NoMatch from "./pages/no-match";
 import Charmander from "./pages/charmander";
 import Germany from "./pages/germany";
@@ -15,6 +14,7 @@ import Gallery from "./pages/gallery";
 import Tabs from "./pages/tabs";
 import Games from "./pages/games";
 import GameInfo from "./pages/gameInfo";
+import Series from "./pages/series";
 
 const App = () => {
   return (
@@ -23,7 +23,8 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Charmander" element={<Charmander />} />
-          <Route path="Tabs" element={<Tabs />} />{" "}
+          <Route path="Tabs" element={<Tabs />} />
+          <Route path="Series" element={<Series />} />
           <Route path="games">
             <Route index element={<Games />} />
             <Route path=":gameId" element={<GameInfo />} />

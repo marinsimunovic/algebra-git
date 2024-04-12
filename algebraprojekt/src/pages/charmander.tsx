@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import Arrow from "../assets/arrow.svg";
 type PokemonType = {
   name: string;
   order: number;
@@ -30,6 +30,9 @@ const Charmander = () => {
   }, []);
   return (
     <>
+      <a href="/vjezbe">
+        <img className="back" src={Arrow} alt="arrow" />
+      </a>
       {pokemonData ? (
         <>
           <h1>

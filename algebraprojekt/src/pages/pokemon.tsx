@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Arrow from "../assets/arrow.svg";
 type Berry = {
   name: string;
   url: string;
@@ -64,6 +65,9 @@ const Pokemon = () => {
   }, []);
   return (
     <>
+      <a href="/vjezbe">
+        <img className="back" src={Arrow} alt="arrow" />
+      </a>
       <h1>Pokemon Berries</h1>
       {loading ? (
         <div>Loading...</div>

@@ -1,7 +1,7 @@
 import { MutableRefObject, useRef, useState } from "react";
 import Tag from "../components/tag";
 import Button from "../components/button";
-
+import Arrow from "../assets/arrow.svg";
 const ProfileMaker = () => {
   const [name, setName] = useState("Marin Simunovic");
   const [tags, setTags] = useState<string[]>([]);
@@ -18,6 +18,9 @@ const ProfileMaker = () => {
 
   return (
     <>
+      <a href="/vjezbe">
+        <img className="back" src={Arrow} alt="arrow" />
+      </a>
       <div className="profile">
         <div className="profile__card">
           <img

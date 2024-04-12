@@ -1,0 +1,40 @@
+.series {
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 36px;
+    color: var(--color-gray-100);
+    background-color: var(--color-gray-700);
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  &__card {
+    border: 1px solid var(--color-black);
+    border-radius: var(--border-rounded);
+    cursor: pointer;
+    background-color: var(--color-gray-700);
+    color: var(--color-gray-100);
+  }
+  &__img {
+    display: block;
+    object-fit: contain;
+    overflow: hidden;
+    width: 100%;
+    height: 20rem;
+  }
+  &__name {
+    padding: 1rem;
+  }
+}
+.page {
+  &__left {
+    &__content {
+      background-color: var(--color-gray-700);
+    }
+  }
+}
