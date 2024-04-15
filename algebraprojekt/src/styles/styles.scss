@@ -33,6 +33,16 @@ body {
   background-color: var(--color-gray-100);
   font-family: "Lato", sans-serif;
 }
+.back {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    transform: scale(1.2) translateY(-0.3rem);
+  }
+}
 
 //IMPORTS
 //components
@@ -54,3 +64,4 @@ body {
 @import "./components/movie.scss";
 @import "./components/games.scss";
 @import "./components/series.scss";
+@import "./components/game-info.scss";

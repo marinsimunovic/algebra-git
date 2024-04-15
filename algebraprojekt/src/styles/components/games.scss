@@ -2,12 +2,17 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
   }
   &__card {
     border: 1px solid var(--color-black);
     border-radius: var(--border-rounded);
     cursor: pointer;
+    background-color: var(--color-gray-400);
+    &:hover {
+      transform: scale(1.1);
+      background-color: var(--color-gray-100);
+    }
   }
   &__img {
     display: block;
@@ -19,10 +24,4 @@
   &__name {
     padding: 1rem;
   }
-}
-.back {
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

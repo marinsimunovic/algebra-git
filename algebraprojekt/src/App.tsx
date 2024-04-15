@@ -15,6 +15,7 @@ import Tabs from "./pages/tabs";
 import Games from "./pages/games";
 import GameInfo from "./pages/gameInfo";
 import Series from "./pages/series";
+import SeriesInfo from "./pages/series-info";
 
 const App = () => {
   return (
@@ -24,7 +25,10 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="Charmander" element={<Charmander />} />
           <Route path="Tabs" element={<Tabs />} />
-          <Route path="Series" element={<Series />} />
+          <Route path="Series" element={<Series />}>
+            <Route index element={<Series />} />
+            <Route path=":seriesId" element={<SeriesInfo />} />
+          </Route>
           <Route path="games">
             <Route index element={<Games />} />
             <Route path=":gameId" element={<GameInfo />} />

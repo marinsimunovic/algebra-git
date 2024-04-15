@@ -1,0 +1,22 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  &__images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .game__img {
+      display: block;
+
+      overflow: hidden;
+      &--sm {
+        height: 20rem;
+      }
+      &--bg {
+        object-fit: cover;
+        width: 100%;
+        height: 20rem;
+      }
+    }
+  }
+}

@@ -9,9 +9,11 @@ const Games = () => {
   };
   return (
     <>
-      <a href="/vjezbe">
-        <img className="back" src={Arrow} alt="arrow" />
-      </a>
+      <div>
+        <a href="/vjezbe">
+          <img className="back" src={Arrow} alt="arrow" />
+        </a>
+      </div>
       <div className="games__grid">
         {gamesData.map((game) => {
           return (
@@ -26,6 +28,7 @@ const Games = () => {
           );
         })}
       </div>
+      <div></div>
     </>
   );
 };
