@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { SeriesType, seriesData } from "../data/series";
 import { useEffect, useState } from "react";
 import Arrow from "../assets/arrow.svg";
-const GameInfo = () => {
+const SeriesInfo = () => {
   const { showId } = useParams();
   const [data, setData] = useState<SeriesType>();
   const getShowInfo = () => {
@@ -16,12 +16,14 @@ const GameInfo = () => {
   }, []);
   return (
     <>
-      {" "}
       {data ? (
         <>
-          <a href="/games">
+          <a href="/series">
             <img className="back" src={Arrow} alt="arrow" />
           </a>
+          <div className="show">
+            <img src={data.imgUrl} alt="" />
+          </div>
         </>
       ) : (
         <div>
@@ -32,4 +34,4 @@ const GameInfo = () => {
     </>
   );
 };
-export default GameInfo;
+export default SeriesInfo;

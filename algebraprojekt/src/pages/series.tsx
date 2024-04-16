@@ -26,7 +26,7 @@ const Series = () => {
               return (
                 <>
                   <div
-                    id={show.id}
+                    key={show.id}
                     onClick={() => goTo(show.id)}
                     className="series__card"
                   >

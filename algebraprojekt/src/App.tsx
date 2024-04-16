@@ -15,7 +15,7 @@ import Tabs from "./pages/tabs";
 import Games from "./pages/games";
 import GameInfo from "./pages/gameInfo";
 import Series from "./pages/series";
-import SeriesInfo from "./pages/series-info";
+import SeriesInfo from "./pages/seriesInfo";
 
 const App = () => {
   return (
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="Tabs" element={<Tabs />} />
           <Route path="Series" element={<Series />}>
             <Route index element={<Series />} />
-            <Route path=":seriesId" element={<SeriesInfo />} />
+            <Route path=":showId" element={<SeriesInfo />} />
           </Route>
           <Route path="games">
             <Route index element={<Games />} />
