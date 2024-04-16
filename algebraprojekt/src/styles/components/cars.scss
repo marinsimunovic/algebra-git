@@ -1,0 +1,32 @@
+.cars {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--color-white);
+  border-radius: 0.5rem;
+  height: 28rem;
+  &__card {
+    padding: 1.5rem;
+    &__SEDANS {
+      background-color: aquamarine;
+    }
+    &__SUVS {
+      background-color: #065034;
+    }
+  }
+  &__img {
+    height: 3rem;
+  }
+  &__button {
+    background-color: var(--color-gray-100);
+    border-radius: 1.5rem;
+  }
+  &__about {
+    line-height: 1.6;
+  }
+}
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

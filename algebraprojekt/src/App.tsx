@@ -16,6 +16,7 @@ import Games from "./pages/games";
 import GameInfo from "./pages/gameInfo";
 import Series from "./pages/series";
 import SeriesInfo from "./pages/seriesInfo";
+import Cars from "./pages/cars";
 
 const App = () => {
   return (
@@ -24,8 +25,9 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Charmander" element={<Charmander />} />
+          <Route path="cars" element={<Cars />} />
           <Route path="Tabs" element={<Tabs />} />
-          <Route path="Series" element={<Series />}>
+          <Route path="Series">
             <Route index element={<Series />} />
             <Route path=":showId" element={<SeriesInfo />} />
           </Route>
