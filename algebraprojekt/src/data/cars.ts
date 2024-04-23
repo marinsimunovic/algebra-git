@@ -21,6 +21,6 @@ export const CarData: CarType[] = [
     imgUrl: "https://www.svgrepo.com/show/115873/car.svg",
     title: "LUXURY",
     about:
-      "Luxury car owners feel a sense of security. They feel safe in the knowledge that these babies are not only well-made, but outfitted with the latest technology.",
+      "Luxury car owners feel a sense of security.Luxury car owners feel a sense of security. They feel safe in the knowledge that these babies are not only well-made, but outfitted with the latest technology.",
   },
 ];
