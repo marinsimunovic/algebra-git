@@ -67,3 +67,8 @@ body {
 @import "./components/series.scss";
 @import "./components/game-info.scss";
 @import "./components/cars.scss";
+@import "./components/glovo.scss";
+
+//overrides
+@import "./overrides/react-date-picker.scss";
+@import "./overrides/react-time-picker.scss";

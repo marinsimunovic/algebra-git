@@ -17,6 +17,7 @@ import GameInfo from "./pages/gameInfo";
 import Series from "./pages/series";
 import SeriesInfo from "./pages/seriesInfo";
 import Cars from "./pages/cars";
+import Glovo from "./pages/glovo";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
             <Route path=":gameId" element={<GameInfo />} />
           </Route>
           <Route path="Germany" element={<Germany />} />
+          <Route path="glovo" element={<Glovo />} />
           <Route path="Pokemon" element={<Pokemon />} />
           <Route path="vjezbe" element={<Vjezbe />} />
           <Route path="data-types" element={<DataTypes />} />
