@@ -105,9 +105,25 @@
       "price": 1099
     },
     {
+      "id": "5364",
       "brand": "asd",
       "color": "asd",
+      "model": "asdg",
+      "price": 325423,
+      "storage": "afjgnr"
+    },
+    {
       "id": "5364",
+      "brand": "asd",
+      "color": "asd",
+      "model": "asdg",
+      "price": 325423,
+      "storage": "afjgnr"
+    },
+    {
+      "id": "5364",
+      "brand": "asd",
+      "color": "asd",
       "model": "asdg",
       "price": 325423,
       "storage": "afjgnr"
