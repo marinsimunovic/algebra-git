@@ -1,32 +1,38 @@
-import { useState, useEffect } from "react";
-
 const Zadaci = () => {
-  const numbers = [6, 8, 54, 7, 53, 78];
+  // Zadani niz brojeva
+  const numbers = [1, 45, 3, 67, 3, 87, 4, 13];
 
-  const [min, setMin] = useState(numbers[0]);
-  const [max, setMax] = useState(numbers[0]);
+  // Inicijalizacija minimuma i maksimuma
+  let min = numbers[0];
+  let max = numbers[0];
 
-  useEffect(() => {
-    let currentMin = numbers[0];
-    let currentMax = numbers[0];
+  // Pronalaženje minimuma i maksimuma korištenjem forEach petlje
+  numbers.forEach((number) => {
+    if (number < min) {
+      min = number;
+    }
+    if (number > max) {
+      max = number;
+    }
+  });
 
-    numbers.forEach((number) => {
-      if (number < currentMin) {
-        currentMin = number;
-      }
-
-      if (number > currentMax) {
-        currentMax = number;
-      }
-    });
-
-    setMin(currentMin);
-    setMax(currentMax);
-  }, []);
-
+  // Ispisivanje rezultata u konzolu
   console.log({ min, max });
 
-  return <></>;
+  const renderNumbers = (count: number): void => {
+    if (count < 0) {
+      console.log("Broj ne može biti negativan.");
+    } else {
+      const numbersArray = Array.from(
+        { length: count + 1 },
+        (_, index) => index
+      );
+      console.log(numbersArray.join(", "));
+    }
+  };
+
+  renderNumbers(20);
+  // Primjer poziva funkcije s brojem 10
 };
 
 export default Zadaci;
