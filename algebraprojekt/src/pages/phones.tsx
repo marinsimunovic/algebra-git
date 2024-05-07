@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
-type PhoneType = {
+export type PhoneType = {
+  id: string;
   brand: string;
   model: string;
   storage: string;
-  id: string;
   color: string;
   price: number;
 };
@@ -18,58 +19,50 @@ const Phones = () => {
         if (res.ok) {
           return res.json();
         }
-        throw new Error("Network response was not ok");
+        throw new Error("Failed to fetch data");
       })
       .then((data) => {
         setData(data);
-        console.log(data);
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-  const putData = () => {
-    const fakeData: PhoneType = {
-      brand: "asd",
-      color: "asd",
-      id: "5364",
-      model: "asdg",
-      price: 325423,
-      storage: "afjgnr",
-    };
-
-    fetch("http://localhost:3000/phones", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(fakeData),
-    });
+  const deleteData = (id: string) => {
+    fetch(`http://localhost:3000/phones/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => {
+        if (res.ok) {
+          getData(); // Move this inside if block
+        }
+        throw new Error("Failed to delete data");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-
-  const deleteData = () => {
-    const toDelete = "5364";
-    fetch(`http://localhost:3000/phones/${toDelete}`, { method: "DELETE" });
-  };
-
-  const editData = () => {
-    const toEdit = "5364";
-    const fakeData: PhoneType = {
-      brand: "asd",
-      color: "asd",
-      id: "5364",
-      model: "asdg",
-      price: 325423,
-      storage: "afjgnr",
-    };
-    fetch(`http://localhost:3000/phones/${toEdit}`, {
+  const editData = (id: string, values: PhoneType) => {
+    fetch(`http://localhost:3000/phones/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(fakeData),
-    });
+      body: JSON.stringify(values),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to update data");
+        }
+        return res.json();
+      })
+      .then(() => {
+        getData(); // Move this inside if block
+      })
+      .catch((err) => {
+        console.log("Error updating data:", err);
+      });
   };
 
   useEffect(() => {
@@ -78,11 +71,44 @@ const Phones = () => {
 
   return (
     <>
-      <div></div>
       <div>
-        <button onClick={putData}>Add Phone</button>{" "}
-        <button onClick={deleteData}>Delete Phone</button>{" "}
-        <button onClick={editData}>Edit Phone</button>
+        <strong>
+          {" "}
+          <NavLink to={"new"}>Add new phone</NavLink>
+        </strong>
+      </div>
+      <hr />
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Brand</th>
+              <th>Model</th>
+              <th>Storage</th>
+              <th>Color</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((phone) => {
+              const { brand, color, id, model, price, storage } = phone;
+              return (
+                <tr key={id}>
+                  <td>{brand}</td>
+                  <td>{model}</td>
+                  <td>{storage}</td>
+                  <td>{color}</td>
+                  <td>{price}</td>
+                  <td>
+                    <button onClick={() => deleteData(id)}>Delete</button>
+                    <button onClick={() => editData(id, phone)}>Edit</button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </>
   );

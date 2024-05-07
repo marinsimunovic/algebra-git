@@ -1,37 +1,5 @@
 {
-  "posts": [
-    {
-      "id": "1",
-      "title": "a title",
-      "views": 100
-    },
-    {
-      "id": "2",
-      "title": "another title",
-      "views": 200
-    }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
-    }
-  ],
   "phones": [
-    {
-      "id": "1",
-      "brand": "Apple",
-      "model": "iPhone 13 Pro",
-      "storage": "128GB",
-      "color": "Graphite",
-      "price": 999
-    },
     {
       "id": "2",
       "brand": "Samsung",
@@ -103,30 +71,6 @@
       "storage": "256GB",
       "color": "Gloss Black",
       "price": 1099
-    },
-    {
-      "id": "5364",
-      "brand": "asd",
-      "color": "asd",
-      "model": "asdg",
-      "price": 325423,
-      "storage": "afjgnr"
-    },
-    {
-      "id": "5364",
-      "brand": "asd",
-      "color": "asd",
-      "model": "asdg",
-      "price": 325423,
-      "storage": "afjgnr"
-    },
-    {
-      "id": "5364",
-      "brand": "asd",
-      "color": "asd",
-      "model": "asdg",
-      "price": 325423,
-      "storage": "afjgnr"
     }
   ]
 }

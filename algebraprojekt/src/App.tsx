@@ -20,6 +20,7 @@ import Cars from "./pages/cars";
 import Glovo from "./pages/glovo";
 import Zadaci from "./pages/zadaci";
 import Phones from "./pages/phones";
+import PhonesCreate from "./pages/phones-create";
 
 const App = () => {
   return (
@@ -41,9 +42,11 @@ const App = () => {
           <Route path="Germany" element={<Germany />} />
           <Route path="glovo" element={<Glovo />} />
           <Route path="Pokemon" element={<Pokemon />} />
-          <Route path="Zadaci" element={<Zadaci />} />
           <Route path="vjezbe" element={<Vjezbe />} />{" "}
-          <Route path="Phones" element={<Phones />} />
+          <Route path="phones">
+            <Route index element={<Phones />} />
+            <Route path="new" element={<PhonesCreate />} />
+          </Route>
           <Route path="data-types" element={<DataTypes />} />
           <Route path="profile-maker" element={<ProfileMaker />} />
           <Route path="pokemons" element={<Pokemons />}>
